@@ -186,7 +186,7 @@ Revert if any of these occur within 24-48 hours:
 ## Implementation Plan
 
 ### Phase 1: Baseline (Before Refactoring)
-1. Capture all baseline metrics (run `.specify/extensions/workflows/refactor/measure-metrics.sh`)
+1. Capture all baseline metrics with the platform-appropriate refactor metrics helper
 2. Create behavioral snapshot (document current outputs)
 3. Ensure 100% test pass rate
 4. Tag current state in git: `git tag pre-refactor-### -m "Baseline before refactor-###"`
@@ -255,4 +255,4 @@ Revert if any of these occur within 24-48 hours:
 [List other refactorings that should happen first]
 
 ---
-*Refactor spec created using `/refactor` workflow - See .specify/extensions/workflows/refactor/*
+*Refactor spec created using `/speckit.spec-kit-extensions.refactor` workflow*

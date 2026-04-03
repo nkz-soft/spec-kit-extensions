@@ -171,4 +171,4 @@ git reset --hard [previous-commit]
 - [ ] Post-mortem scheduled
 
 ---
-*Hotfix created using `/hotfix` workflow - See .specify/extensions/workflows/hotfix/*
+*Hotfix created using `/speckit.spec-kit-extensions.hotfix` workflow*

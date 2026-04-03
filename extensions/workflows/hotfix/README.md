@@ -6,7 +6,7 @@ The hotfix workflow handles emergency production issues that require immediate r
 
 ## When to Use
 
-Use `/speckit.hotfix` when:
+Use `/speckit.spec-kit-extensions.hotfix` when:
 
 - Production service is down or severely degraded
 - Data loss or corruption is actively occurring
@@ -14,9 +14,9 @@ Use `/speckit.hotfix` when:
 - Critical functionality is completely broken
 - Every minute of downtime costs money/reputation
 
-**Do NOT use `/speckit.hotfix` for**:
-- Non-urgent bugs → use `/speckit.bugfix` instead
-- Planned changes → use `/speckit.modify` or `/speckit.specify` instead
+**Do NOT use `/speckit.spec-kit-extensions.hotfix` for**:
+- Non-urgent bugs → use `/speckit.spec-kit-extensions.bugfix` instead
+- Planned changes → use `/speckit.spec-kit-extensions.modify` or `/speckit.specify` instead
 - Known issues that can wait → use normal workflow
 - Issues only affecting staging/dev → fix normally
 
@@ -92,7 +92,7 @@ specs/
 ## Command Usage
 
 ```bash
-/speckit.hotfix "database connection pool exhausted causing 503 errors"
+/speckit.spec-kit-extensions.hotfix "database connection pool exhausted causing 503 errors"
 ```
 
 This will:
@@ -117,7 +117,7 @@ This will:
 The hotfix workflow uses an **expedited checkpoint approach** for emergencies while still providing critical review points:
 
 ### Phase 1: Incident Response
-- **Command**: `/speckit.hotfix "incident description"`
+- **Command**: `/speckit.spec-kit-extensions.hotfix "incident description"`
 - **Creates**: `hotfix.md` with incident timestamp and `post-mortem.md` template
 - **Checkpoint**: Quick assessment - P0/P1/P2 severity? How many users affected? Notify stakeholders immediately.
 

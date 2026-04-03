@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.0.0] - 2025-10-08
 
+## [2.1.0] - 2026-04-03
+
+### Added
+
+- native spec-kit extension manifest in `extension.yml`
+- package exclusion rules in `.extensionignore`
+- PowerShell workflow creator scripts for Windows support
+- namespaced extension command registration for the five lifecycle workflows
+
+### Changed
+
+- installation guidance now uses `specify extension add` instead of manual file copying
+- documentation now describes the package as a native spec-kit extension
+- workflow creators now resolve templates from the installed extension package root
+
+### Migration
+
+- update `/speckit.bugfix` style references to `/speckit.spec-kit-extensions.bugfix`
+- update agent rules and local docs to the namespaced command surface
+
 ### 🎯 Major Changes
 
 **Checkpoint-Based Workflow Redesign** - All extension workflows now use a multi-phase checkpoint approach that gives users review and control points before implementation.

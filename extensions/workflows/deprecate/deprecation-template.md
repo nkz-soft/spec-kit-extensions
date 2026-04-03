@@ -317,4 +317,4 @@ Link: <[migration guide URL]>; rel="deprecation"
 
 ---
 
-*Deprecation plan created using `/deprecate` workflow - See .specify/extensions/workflows/deprecate/*
+*Deprecation plan created using `/speckit.spec-kit-extensions.deprecate` workflow*
