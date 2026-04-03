@@ -2,6 +2,8 @@
 
 Native [spec-kit](https://github.com/github/spec-kit) extension package for lifecycle workflows that are outside the core new-feature flow.
 
+This repository is a fork of [MartyBonacci/spec-kit-extensions](https://github.com/MartyBonacci/spec-kit-extensions), adapted to work as a full-fledged native spec-kit extension.
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## What This Package Adds

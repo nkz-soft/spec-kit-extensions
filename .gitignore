@@ -50,3 +50,10 @@ yarn-error.log*
 dist/
 build/
 *.egg-info/
+
+
+# Legacy local Spec Kit output
+.specify/
+specs/
+.agents/
+AGENTS.md 
