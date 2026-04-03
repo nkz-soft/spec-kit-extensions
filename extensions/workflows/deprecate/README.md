@@ -6,7 +6,7 @@ The deprecation workflow manages the planned sunset of features. It uses a **3-p
 
 ## When to Use
 
-Use `/speckit.deprecate` when:
+Use `/speckit.spec-kit-extensions.deprecate` when:
 
 - Feature no longer aligns with product vision
 - Better alternative exists and users should migrate
@@ -15,8 +15,8 @@ Use `/speckit.deprecate` when:
 - Security/compliance concerns
 - Technical debt reduction initiative
 
-**Do NOT use `/speckit.deprecate` for**:
-- Quick bug fixes → use `/speckit.bugfix` instead
+**Do NOT use `/speckit.spec-kit-extensions.deprecate` for**:
+- Quick bug fixes → use `/speckit.spec-kit-extensions.bugfix` instead
 - Temporary feature disabling → use feature flags
 - Emergency removal → explain why it's urgent first
 - Features still actively used → understand impact first
@@ -91,8 +91,8 @@ Use `/speckit.deprecate` when:
 ```
 specs/
 └── deprecate-001-edit-profile-form/
-    ├── deprecation.md      # Deprecation plan (created by /speckit.deprecate)
-    ├── dependencies.md     # Auto-generated dependency scan (created by /speckit.deprecate)
+    ├── deprecation.md      # Deprecation plan (created by /speckit.spec-kit-extensions.deprecate)
+    ├── dependencies.md     # Auto-generated dependency scan (created by /speckit.spec-kit-extensions.deprecate)
     ├── plan.md             # Implementation plan (created by /speckit.plan after review)
     └── tasks.md            # Phased tasks (created by /speckit.tasks after plan review)
 ```
@@ -100,7 +100,7 @@ specs/
 ## Command Usage
 
 ```bash
-/speckit.deprecate 014 "low usage (< 1% users) and high maintenance burden"
+/speckit.spec-kit-extensions.deprecate 014 "low usage (< 1% users) and high maintenance burden"
 ```
 
 This will:
@@ -265,7 +265,7 @@ Files importing `app/components/EditProfileForm.tsx`:
 The deprecation workflow uses checkpoints to ensure proper planning and stakeholder alignment before executing a multi-month sunset:
 
 ### Phase 1: Analysis & Dependency Scan
-- **Command**: `/speckit.deprecate 014 "reason"`
+- **Command**: `/speckit.spec-kit-extensions.deprecate 014 "reason"`
 - **Creates**: `deprecation.md` plan template and auto-generated `dependencies.md`
 - **Checkpoint**: Review dependencies and usage data - is deprecation justified? Are there hidden dependencies the scan missed?
 

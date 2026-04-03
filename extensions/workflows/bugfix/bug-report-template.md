@@ -78,4 +78,4 @@ User description: "$ARGUMENTS"
 [How can we prevent this class of bug in the future? New validation? Better tests? Refactoring?]
 
 ---
-*Bug report created using `/bugfix` workflow - See .specify/extensions/workflows/bugfix/*
+*Bug report created using `/speckit.spec-kit-extensions.bugfix` workflow*

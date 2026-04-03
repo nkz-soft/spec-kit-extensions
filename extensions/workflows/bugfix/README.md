@@ -6,7 +6,7 @@ The bugfix workflow is designed for fixing defects in existing code. It enforces
 
 ## When to Use
 
-Use `/speckit.bugfix` when:
+Use `/speckit.spec-kit-extensions.bugfix` when:
 
 - A specific behavior is broken or incorrect
 - Users report unexpected behavior
@@ -14,11 +14,11 @@ Use `/speckit.bugfix` when:
 - Production monitoring detects an issue
 - Edge cases cause crashes or errors
 
-**Do NOT use `/speckit.bugfix` for**:
+**Do NOT use `/speckit.spec-kit-extensions.bugfix` for**:
 - Adding new features → use `/speckit.specify` instead
-- Changing existing feature behavior intentionally → use `/speckit.modify` instead
-- Code quality improvements without behavior change → use `/speckit.refactor` instead
-- Emergency production issues → use `/speckit.hotfix` instead
+- Changing existing feature behavior intentionally → use `/speckit.spec-kit-extensions.modify` instead
+- Code quality improvements without behavior change → use `/speckit.spec-kit-extensions.refactor` instead
+- Emergency production issues → use `/speckit.spec-kit-extensions.hotfix` instead
 
 ## Process
 
@@ -65,7 +65,7 @@ Use `/speckit.bugfix` when:
 ```
 specs/
 └── bugfix-001-description/
-    ├── bug-report.md      # Bug documentation (created by /speckit.bugfix)
+    ├── bug-report.md      # Bug documentation (created by /speckit.spec-kit-extensions.bugfix)
     ├── plan.md            # Fix plan (created by /speckit.plan after review)
     └── tasks.md           # Task breakdown (created by /speckit.tasks after plan review)
 ```
@@ -73,7 +73,7 @@ specs/
 ## Command Usage
 
 ```bash
-/speckit.bugfix "button click doesn't save form data"
+/speckit.spec-kit-extensions.bugfix "button click doesn't save form data"
 ```
 
 This will:
@@ -124,7 +124,7 @@ File: `app/routes/profile.edit.tsx:45`
 The bugfix workflow uses a checkpoint-based approach to ensure you review and approve the fix strategy before implementation:
 
 ### Phase 1: Initial Analysis
-- **Command**: `/speckit.bugfix "bug description"`
+- **Command**: `/speckit.spec-kit-extensions.bugfix "bug description"`
 - **Creates**: `bug-report.md` with initial analysis
 - **Checkpoint**: Review bug report, reproduce bug, identify root cause
 

@@ -193,4 +193,4 @@ If Yes:
 - [ ] Constitution compliance verified
 
 ---
-*Modification spec created using `/modify` workflow - See .specify/extensions/workflows/modify/*
+*Modification spec created using `/speckit.spec-kit-extensions.modify` workflow*

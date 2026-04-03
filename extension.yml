@@ -1,0 +1,42 @@
+schema_version: "1.0"
+
+extension:
+  id: "spec-kit-extensions"
+  name: "spec-kit Extensions"
+  version: "2.1.0"
+  description: "Lifecycle workflows for bugfixes, modifications, refactors, hotfixes, and deprecations."
+  author: "nkz-soft"
+  repository: "https://github.com/nkz-soft/spec-kit-extensions"
+  homepage: "https://github.com/nkz-soft/spec-kit-extensions"
+  license: "MIT"
+
+requires:
+  speckit_version: ">=0.1.0"
+  tools:
+    - name: "git"
+      required: true
+
+provides:
+  commands:
+    - name: "speckit.spec-kit-extensions.bugfix"
+      file: "commands/speckit.bugfix.md"
+      description: "Create a bugfix workflow with regression-first validation."
+    - name: "speckit.spec-kit-extensions.modify"
+      file: "commands/speckit.modify.md"
+      description: "Create a modification workflow with impact analysis."
+    - name: "speckit.spec-kit-extensions.refactor"
+      file: "commands/speckit.refactor.md"
+      description: "Create a refactor workflow with behavior-preservation tracking."
+    - name: "speckit.spec-kit-extensions.hotfix"
+      file: "commands/speckit.hotfix.md"
+      description: "Create an expedited hotfix workflow with post-mortem follow-up."
+    - name: "speckit.spec-kit-extensions.deprecate"
+      file: "commands/speckit.deprecate.md"
+      description: "Create a phased deprecation workflow with dependency analysis."
+
+tags:
+  - "workflow"
+  - "lifecycle"
+  - "process"
+  - "quality"
+  - "cross-platform"

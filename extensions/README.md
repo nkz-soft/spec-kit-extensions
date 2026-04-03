@@ -1,58 +1,47 @@
-# Specify Extension System
+# Installed Workflow Overview
 
-The extension system provides additional workflow types beyond the core `/specify` workflow for feature development.
+This directory contains the workflow templates and workflow-specific documentation shipped with the `spec-kit-extensions` package.
 
-## Available Workflows
+## Registered Command Surface
 
-### Core Workflow (Built-in)
-- **`/specify`** - Create new features from scratch (greenfield development)
+The extension registers the following commands:
 
-### Extension Workflows
-- **`/speckit.bugfix`** - Bug remediation with regression-test-first approach
-- **`/speckit.modify`** - Extend or modify existing features with impact analysis
-- **`/speckit.refactor`** - Improve code quality while preserving behavior with metrics
-- **`/speckit.hotfix`** - Emergency production fixes with expedited checkpoint process
-- **`/speckit.deprecate`** - Planned sunset of features with 3-phase migration
+- `speckit.spec-kit-extensions.bugfix`
+- `speckit.spec-kit-extensions.modify`
+- `speckit.spec-kit-extensions.refactor`
+- `speckit.spec-kit-extensions.hotfix`
+- `speckit.spec-kit-extensions.deprecate`
 
-## Enabling Extensions
+## Workflow Inventory
 
-Extensions are enabled by default in this project. To disable an extension, edit `.specify/extensions/enabled.conf` and comment out the workflow.
+### Bugfix
 
-## Workflow Selection Guide
+- template source: `extensions/workflows/bugfix/`
+- purpose: reproducible bug analysis and regression-first repair
 
-| Scenario | Use This Workflow |
-|----------|------------------|
-| Building new feature | `/specify` |
-| Fixing a bug | `/speckit.bugfix` |
-| Adding fields to existing feature | `/speckit.modify` |
-| Extracting duplicate code | `/speckit.refactor` |
-| Production is down | `/speckit.hotfix` |
-| Removing old feature | `/speckit.deprecate` |
+### Modify
 
-## Extension Structure
+- template source: `extensions/workflows/modify/`
+- purpose: behavior changes to existing features with impact review
 
-Each workflow extension contains:
-- **Template files** - Markdown templates for specs and documentation
-- **Command definition** - `.claude/commands/speckit.{workflow}.md` for AI agents
-- **Bash scripts** - `.specify/scripts/bash/create-{workflow}.sh` for automation
-- **Checkpoint workflow** - Multi-phase approach with review points (plan → tasks → implement)
+### Refactor
 
-## Creating Custom Extensions
+- template source: `extensions/workflows/refactor/`
+- purpose: structure and quality improvements without behavior change
 
-See `docs/extension-development.md` for guide on creating your own workflow extensions.
+### Hotfix
 
-## Compatibility
+- template source: `extensions/workflows/hotfix/`
+- purpose: expedited production incident response with follow-up documentation
 
-These extensions are designed to be:
-- **Agent-agnostic** - Work with Claude Code, GitHub Copilot, Gemini CLI, etc.
-- **Non-breaking** - Don't modify core Specify functionality
-- **Spec Kit compatible** - Follow GitHub Spec Kit conventions for future contribution
+### Deprecate
 
-## Version
+- template source: `extensions/workflows/deprecate/`
+- purpose: phased removal with dependency and migration analysis
 
-Extension System Version: 2.0.0
-Compatible with Specify Core: v0.0.18+
+## Notes
 
-## License
-
-Same license as parent project (Specify/Spec Kit)
+- command registration is defined by the root [extension.yml](../extension.yml)
+- shell scripts live in [../scripts](../scripts)
+- PowerShell scripts live in [../scripts/powershell](../scripts/powershell)
+- templates stay in this directory so both local development installs and packaged releases use the same workflow source
